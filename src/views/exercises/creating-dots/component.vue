@@ -5,7 +5,8 @@
             :cx="item[0]"
             :cy="item[1]"
             r="10"
-            fill='#fff' />
+            fill='#fff'
+            @click="onClick(item)" />
   </svg>
 </template>
 
@@ -16,6 +17,11 @@ export default {
   data() {
     return {
       dataset
+    }
+  },
+  methods: {
+    onClick(item) {
+      console.log('this is an item', item)
     }
   }
 }
